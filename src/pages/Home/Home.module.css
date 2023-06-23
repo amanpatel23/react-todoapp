@@ -1,0 +1,50 @@
+.todo__outer {
+  width: 100vw;
+  height: 100vh;
+  background: cyan;
+  display: flex;
+}
+
+.todo__inner {
+  width: 450px;
+  /* background: #fff; */
+  margin: auto;
+}
+
+.todo__addTask {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.inputField {
+  width: 100%;
+}
+
+.inputField input {
+  font-size: 1.2rem;
+  background: none;
+  border: 1.5px solid #000;
+  outline: none;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.inputField input::placeholder {
+  font-size: 0.9rem;
+}
+
+.addBtn button {
+  background: none;
+  border: 1.5px solid #000;
+  font-size: 1.2rem;
+  padding: 4px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todo__tasksList {
+  margin-top: 28px;
+  height: 450px;
+  overflow-y: scroll;
+}

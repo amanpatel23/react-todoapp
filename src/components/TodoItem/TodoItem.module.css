@@ -1,0 +1,45 @@
+.item__outer {
+  /* background: blue; */
+  border: 1.5px solid #000;
+  border-radius: 4px;
+  margin-bottom: 14px;
+}
+
+.item__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 14px;
+}
+
+.item__text p {
+  font-size: 1.2rem;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.action__btns {
+  display: flex;
+  align-items: center;
+  /* background: red; */
+}
+
+.check input {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.action__btns i {
+  margin-right: 12px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: blue;
+}
+
+.delete i {
+  color: red;
+}
