@@ -6,10 +6,12 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <>
-    <TodoProvider>
-      <ToastContainer position="top-right" autoClose={3000} />
-      <Home />
-    </TodoProvider>
+      <TodoProvider>
+        {/* toast container for displaying messages */}
+        <ToastContainer position="top-right" autoClose={3000} />
+        {/* rendering Home page here */}
+        <Home />
+      </TodoProvider>
     </>
   );
 }

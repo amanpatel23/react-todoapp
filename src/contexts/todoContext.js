@@ -6,12 +6,17 @@ import { v4 as uuidv4 } from "uuid";
 const todoContext = createContext();
 
 function TodoProvider({ children }) {
+
+  // base url for calling different api
   const baseUrl = "https://jsonplaceholder.typicode.com/todos";
+  // state for storing todo items
   const [todoItems, setTodoItems] = useState([]);
+  // states for keeping the information about editing mode
   const [editingMode, setEditingMode] = useState(false);
   const [clickedTodo, setClickedTodo] = useState({});
 
   useEffect(() => {
+    // fetch the todo items from the api when the component mounts
     const fetchTodoItems = async () => {
       try {
         let todos = await axios(baseUrl + "?userId=1");
@@ -29,6 +34,7 @@ function TodoProvider({ children }) {
     fetchTodoItems();
   }, []);
 
+  // function for adding a new todo item
   const addTodoItem = async (newTodoItem) => {
     try {
       const response = await axios.post(baseUrl, newTodoItem);
@@ -44,8 +50,8 @@ function TodoProvider({ children }) {
     }
   };
 
+  // function for updating an existing todo item
   const updateTodoItem = async (todoId, todoData) => {
-    // put request to update the todoitem
     try {
       const { id } = todoData;
       const response = await axios.patch(`${baseUrl}/${id}`, todoData);
@@ -67,6 +73,7 @@ function TodoProvider({ children }) {
     }
   };
 
+  // function for deleting an existing todo item
   const deleteTodoItem = async (todoData) => {
     try {
       const { id, todoId } = todoData;
