@@ -2,6 +2,18 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Hosted Link:
+https://react-todoapp-ap.netlify.app/
+
+### react-todoapp
+It fetches the todos from the JSONPlaceholder api and shows that on the screen. Users can perfrom the CRUD operation using the REST API (although all the API requests are fake and they don't really change anything on the server but the changes will get reflected on the screen).
+
+### Features:
+1. Users can add a new todo item by calling a POST request on the api. Although the request is the fake request and it doesn't add a new item to the server. But the new todo item gets reflected on the screen using states.
+2. Users can update an existing todo item. (api call doesn't update the item on the server but the changes gets reflected on the screen)
+3. Users can delete an existing todo item. (api call doesn't delete the item from the server but the item gets removed locally)
+4. Users can toggle the task completion status.
+
 ## Available Scripts
 
 In the project directory, you can run:
